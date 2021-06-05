@@ -17,9 +17,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
     @Bean
 
-    public Docket api(){
+    public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2).select().apis(Predicates.not(RequestHandlerSelectors.basePackage("org.springframework.boot"))).build();
-
     }
 
     public void addResouceHandler(ResourceHandlerRegistry registry) {
