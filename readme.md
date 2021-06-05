@@ -2,4 +2,4 @@
 
 ## Init project gradle
 
-`gradle init --type java-application`
+[![Setting init project](docs/init-project-gradle.png)](https://start.spring.io/)
