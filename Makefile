@@ -1,5 +1,5 @@
 run:
-	./gradlew bootRun
+	./gradlew bootJar --continuous | ./gradlew bootRun
 build:
 	./gradlew build
 run-jar:
