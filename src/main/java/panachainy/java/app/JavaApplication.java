@@ -1,4 +1,4 @@
-package panachainy.java.java;
+package panachainy.java.app;
 
 import java.util.TimeZone;
 

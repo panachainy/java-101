@@ -1,4 +1,4 @@
-package panachainy.java.java.config;
+package panachainy.java.app.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
