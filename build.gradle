@@ -36,6 +36,11 @@ test {
 	useJUnitPlatform()
 }
 
+task javadocJar(type: Jar) {
+	classifier = "javadoc"
+	from javadoc
+}
+
 springBoot {
     buildInfo()
 }
