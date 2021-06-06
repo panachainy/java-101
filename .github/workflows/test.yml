@@ -4,7 +4,7 @@ jobs:
   Build:
     strategy:
       matrix:
-        java-version: [11, 16]
+        java-version: [16]
         platform: [ubuntu-latest]
     runs-on: ${{ matrix.platform }}
     services:
