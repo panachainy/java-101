@@ -12,3 +12,7 @@ doc:
 	./gradlew javadocJar
 doc-open:
 	open ./build/docs/javadoc/index.html
+test:
+	./gradlew test
+test-full:
+	./gradlew test -i
