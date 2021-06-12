@@ -14,5 +14,7 @@ doc-open:
 	open ./build/docs/javadoc/index.html
 test:
 	./gradlew test
+test-mem:
+	./gradlew test --args='--spring.profiles.active=mem'
 test-full:
 	./gradlew test -i
