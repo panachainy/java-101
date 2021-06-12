@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'panachainy.java'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.2-SNAPSHOT'
 sourceCompatibility = '16'
 
 configurations {
@@ -30,8 +30,24 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// TODO: Change to postgres after fix github action
+	testImplementation group: 'com.h2database', name: 'h2', version: '1.3.148'
 }
 
 test {
 	useJUnitPlatform()
+	testLogging {
+        events "PASSED", "SKIPPED", "FAILED"
+    }
+	// TODO: Change to postgres after fix github action
+	systemProperty 'spring.profiles.active', 'MEM'
+}
+
+task javadocJar(type: Jar) {
+	classifier = "javadoc"
+	from javadoc
+}
+
+springBoot {
+    buildInfo()
 }
