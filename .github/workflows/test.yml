@@ -11,6 +11,7 @@ jobs:
       postgres:
         image: postgres
         env:
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: "1234"
           POSTGRES_DB: java_101_test
         options: >-
