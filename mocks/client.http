@@ -1,10 +1,18 @@
 ### Health
 GET http://localhost:8080/actuator/health
 
-### Info
+### Info *only dev profile
 
 GET http://localhost:8080/actuator/info
 
-### All actuator
+### Get All actuator
 
 GET http://localhost:8080/actuator
+
+### Get version app
+
+GET http://localhost:8080/version
+
+###
+
+GET http://localhost:8080/example
