@@ -1,0 +1,25 @@
+FORMAT: 1A
+
+# ExternalStatus
+
+## Status [/status]
+
+### all status [GET]
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "status": [
+                    {
+                        "id": 1,
+                        "status": true
+                    },
+                    {
+                        "id": 2,
+                        "status": false
+                    }
+                ]
+            }
+
