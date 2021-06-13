@@ -1,9 +1,13 @@
 package panachainy.java.app.model;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 
 @Data
 public class ExternalStatusResponse {
-    Long id;
-    Boolean status;
+    @JsonProperty("status")
+    List<ExternalStatus> externalStatus;
 }
