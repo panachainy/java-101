@@ -4,5 +4,6 @@ import lombok.Data;
 
 @Data
 public class ExternalStatusResponse {
-    String status;
+    Long id;
+    Boolean status;
 }
