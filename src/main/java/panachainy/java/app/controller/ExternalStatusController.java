@@ -13,7 +13,7 @@ import panachainy.java.app.model.ExternalStatusResponse;
 
 @RestController
 @RequiredArgsConstructor
-public class ExampleController {
+public class ExternalStatusController {
     @Autowired
     private final ExternalStatusClient externalStatusClient;
 
