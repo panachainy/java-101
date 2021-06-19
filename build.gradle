@@ -9,6 +9,9 @@ version = '0.0.2-SNAPSHOT'
 sourceCompatibility = '16'
 
 configurations {
+	all {
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+	}
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
@@ -26,6 +29,7 @@ dependencies {
 	implementation group: 'org.springframework', name: 'spring-beans', version: '5.3.7'
 	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
 	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '3.0.3'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2', version: '2.5.0'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'org.postgresql:postgresql'
