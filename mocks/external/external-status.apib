@@ -36,3 +36,27 @@ FORMAT: 1A
                 ]
             }
 
+## Status [/status/{key}]
+
+### Status [PUT]
+
++ Parameters
+    + key: `1` (string) - The id of the Put.
+
++ Request (application/json)
+
+    + Body
+
+            {
+                "id": null,
+                "status": false
+            }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "id": 1,
+                "status": false
+            }

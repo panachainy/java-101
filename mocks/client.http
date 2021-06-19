@@ -15,8 +15,17 @@ GET http://localhost:8080/version
 
 ###
 
-GET http://localhost:8080/example
+GET http://localhost:8080/external-status
 
 ###
 
-GET http://localhost:8080/example-all
+GET http://localhost:8080/external-status-all
+
+###
+
+PUT http://localhost:8080/external-status/1
+Content-Type: application/json
+
+{
+    "status": false
+}

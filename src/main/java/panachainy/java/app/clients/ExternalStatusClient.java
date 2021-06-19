@@ -2,6 +2,7 @@ package panachainy.java.app.clients;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -26,7 +27,8 @@ public interface ExternalStatusClient {
     // ExternalStatusResponse update(@PathVariable("id") Long id,
     // ExternalStatusResponse store);
 
-    // TODO: try put
+    @RequestMapping(method = RequestMethod.PUT, value = "/status/{key}", consumes = "application/json")
+    ResponseEntity<ExternalStatus> put(@PathVariable("key") String key, ExternalStatus value);
 
     // TODO: try delete
 }
